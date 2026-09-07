@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import { PrismaClient } from '@prisma/client';
 import { apiAuthAndRateLimit } from './middleware/rateLimiter.js';
-import { auditLogger } from './middleware/auditLogger.js';
+import { auditLogger as apiAuditLogger } from './middleware/auditLogger.js';
 dotenv.config();
 
 const app = express();
